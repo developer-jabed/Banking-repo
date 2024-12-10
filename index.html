@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo Banking</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="dashboard.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main id="main" class=" flex justify-center items-center align-middle h-screen bg-slate-200 px-24">
+       <div class="bg-base-600">
+
+              <div class="card bg-base-100 h-full w-full max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Phone</span>
+                    </label>
+                    <input type="tel" id="phone-number" placeholder="Phone" class="input input-bordered" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin</span>
+                    </label>
+                    <input type="password" id="password-input" placeholder="Pin" class="input input-bordered" required />
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="login-btn" class="btn btn-primary">Login</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+       </div>
+       <dialog id="my-modal-4" class="modal">
+        <div class="modal-box w-11/12 flex flex-col items-center max-w-80">
+          <h3 class="text-2xl font-bold text-center py-2">CONGRATES!</h3>
+          <img class="text-center" src="./assets/coin.png" alt="" />
+          <p class="py-4 text-center">You Have loged in </p>
+          <h4 class="font-bold">Successfully</h4>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button, it will close the modal -->
+              <button id="close-btn" class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+       <dialog id="my-modal-3" class="modal">
+        <div class="modal-box w-11/12 flex flex-col items-center max-w-80">
+          <h3 class="text-2xl font-bold text-center py-2">OPPS</h3>
+          <img class="text-center" src="./assets/coin.png" alt="" />
+          <p class="py-4 text-center">Log in  </p>
+          <h4 class="font-bold">Failed</h4>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button, it will close the modal -->
+              <button id="close-btn" class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+    </main>
+    <section id="Banking" class="hidden">
+      <nav class="flex justify-around">
+        <h3 class="font-bold text-2xl text-[#588dbf]">Banking</h3>
+        <p id="main-amount" class="flex font-bold text-2xl text-red-300">1000 <span>BDT</span></p>
+      </nav>
+      <div class="  flex justify-center gap-11 mt-8">
+        <button id="cash-in" class="btn btn-accent">Cash In</button>
+        <button id="cash-out" class="btn btn-primary">Cash Out</button>
+        <button id="transaction-btn" class="btn btn-secondary">Transaction</button>
+      </div>
+      <section id="cash-in " class="hidden">
+        <div class="mt-12 text-center items-center  px-16 gap-10  flex justify-center">
+
+          <div class=" shadow-2xl bg-[#67207a] rounded-xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text  text-white">Amount</span>
+                </label>
+                <input type="text" id="amount-in" placeholder="Amount" class="input w-[480px] text-black input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-white">Pin</span>
+                </label>
+                <input type="password" id="password-in" placeholder="Pin" class="input text-black input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="cash-in-btn" class="btn btn-primary">Cash in</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section id="cash-out ">
+        <div class="mt-12 text-center items-center  px-16 gap-10  flex justify-center">
+
+          <div class=" shadow-2xl bg-[#67207a] rounded-xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text  text-white">Amount</span>
+                </label>
+                <input type="text" id="amount-in" placeholder="Amount" class="input w-[480px] text-black input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-white">Pin</span>
+                </label>
+                <input type="password" id="password-out" placeholder="Pin" class="input text-black input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="cash-out-btn" class="btn btn-primary">Cash out</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </section>
+    <script src="js/mfs.js"></script>
+    <script src="js/cash-in.js"></script>
+    <script src="js/cash-out.js"></script>
+  </body>
+</html>
